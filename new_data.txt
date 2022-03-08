@@ -1,0 +1,23 @@
+              Qty    cost    LTP  ...  Day chg.  Profit_Class       Hold_Sell
+Instrument                        ...                                        
+VIVANTA       260   45.43   5.00  ...     -4.88     High Loss                
+SACHEMT       210   48.53  52.00  ...     -5.00     High Loss                
+SVAMSOF      2000    3.00  25.00  ...     -5.00     High Loss                
+UJAAS-BE      500    7.22   5.00  ...       NaN   High Profit  Immediate Sell
+NCLRESE      3000    2.19   1.46  ...     -4.58     High Loss                
+SANWARIA-BZ   100    3.00   7.00  ...     -4.17   Small Loss                 
+GTLINFRA     1065    2.00   1.57  ...     -4.85   Small Loss                 
+KELLTONTEC    172  117.08  81.50  ...     -4.96     High Loss                
+UNITECH       600    2.00   2.49  ...     -4.96   Small Loss                 
+SARLAPOLY     100   73.60  53.90  ...     -9.94     High Loss                
+SUZLON        500   12.35   9.05  ...     -4.74     High Loss                
+SWORDEDGE    2000    1.03   0.77  ...     -4.94   Small Loss                 
+RCOM          100    5.00   2.95  ...     -4.84   Small Loss                 
+JPASSOCIAT    100   12.35   9.50  ...     -6.86   Small Loss                 
+WINPRO        100    8.60   6.63  ...       NaN   Small Loss                 
+BRFL          200    5.00   7.03  ...     -5.00   High Profit            Hold
+TRIDENT       238    5.00  50.20  ...     -4.92     High Loss                
+VIKASECO-BE  1000    6.05   5.35  ...     -4.46   Small Loss                 
+LUHARUKA     1000     NaN   3.48  ...     -4.92                              
+
+[19 rows x 9 columns]
