@@ -43,6 +43,6 @@ for i in range(0, len(read_data['P&L']), 1):
 print(read_data['Profit_Class'].value_counts())
 # with open('new_data.txt', 'w') as data_write:
 #     data_write.write(str(read_data))
-
+# 
 # print(read_data['P&L'])
 # print(read_data)
