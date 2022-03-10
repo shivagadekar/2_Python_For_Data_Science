@@ -1,18 +1,6 @@
-# import modules
-import matplotlib.pyplot as mp
 import pandas as pd
-import seaborn as sb
-
-# import file with data
-data = pd.read_csv("Toyota.csv")
-
-# prints data that will be plotted
-# columns shown here are selected by corr() since
-# they are ideal for the plot
-print(data.corr())
-
-# plotting correlation heatmap
-dataplot = sb.heatmap(data.corr(), cmap="YlGnBu", annot=True)
-
-# displaying heatmap
-mp.show()
+cars_data= pd.read_csv("Toyota.csv", index_col=0, na_values=["??", "????"])
+cars_data2 = cars_data.copy()
+# pd.crosstab(index=cars_data2['FuelType'],columns=cars_data2['Automatics]', dropna=True)
+numerical_data = cars_data2.select_dtypes(exclude=[object])
+corr_matrix = numerical_data.corr()
