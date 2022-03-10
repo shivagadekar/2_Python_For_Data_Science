@@ -16,4 +16,4 @@ print(read_data.info())
 print(read_data)
 import numpy as np
 
-print(np.unique(read_data['Qty.']))
+print(np.unique(read_data['Qty']))

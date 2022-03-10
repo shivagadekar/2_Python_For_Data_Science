@@ -22,19 +22,19 @@ read_data.dropna(axis=0, inplace=True)
 
 # Scatter Plot
 
-# plt.scatter(read_data['Age'], read_data['Price'], c='red')
-# plt.title('Scatter Plot')
-# plt.xlabel('Age')
-# plt.ylabel('Price')
-# plt.show()
+plt.scatter(read_data['Age'], read_data['Price'], c='red')
+plt.title('Scatter Plot')
+plt.xlabel('Age')
+plt.ylabel('Price')
+plt.show()
 
-# Histogram
+Histogram
 
-# plt.hist(read_data['KM'],
-#          color= 'green',
-#          edgecolor= 'white',
-#          bins= 20)
-# plt.show()
+plt.hist(read_data['KM'],
+          color= 'green',
+          edgecolor= 'white',
+          bins= 20)
+plt.show()
 
 
 # Bar plot
