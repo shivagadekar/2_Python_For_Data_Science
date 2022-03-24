@@ -53,7 +53,7 @@ print('Data columns with null values:\n', data.isnull().sum())
 #**** No missing values !
 
 #**** Summary of numerical variables
-summary_num = data.describe()
+summary_num = data.describe()   
 print(summary_num)            
 
 #**** Summary of categorical variables
@@ -83,8 +83,8 @@ data.isnull().sum()
 
 missing = data[data.isnull().any(axis=1)]
 # axis=1 => to consider at least one column value is missing in a row
-missing.sort_values(by="city08", ascending=False)
-missing.heas()
+# missing.sort_values(by="city08", ascending=False)
+# missing.heas()
 """ Points to note:
 1. Missing values in Jobtype    = 1809
 2. Missing values in Occupation = 1816 
@@ -109,15 +109,16 @@ data2.columns
 # =============================================================================
 # Gender proportion table:
 # =============================================================================
-gender = pd.crosstab(index = data2["gender"], columns  = 'count', normalize = True)
+gender = pd.crosstab(index = data2["SalStat"], columns  = 'count', normalize = True)
 print(gender)
+occ_plot = pd.crosstab(index = data2['JobType'], columns='count', normalize=True)
+print(occ_plot)
 # =============================================================================
 #  Gender vs Salary Status:
 # =============================================================================
-gender_salstat = pd.crosstab(index = data2["gender"],columns = data2['SalStat'], margins = True, normalize =  'index') 
+gender_salstat = pd.crosstab(index = data2["occupation"],columns =data2['JobType'], margins = True, normalize =  'index') 
                  # Include row and column totals
 print(gender_salstat)
-
 # =============================================================================
 # Frequency distribution of 'Salary status' 
 # =============================================================================
@@ -140,7 +141,7 @@ data2.groupby('SalStat')['age'].median()
 
 #*** Jobtype
 JobType     = sns.countplot(y=data2['JobType'],hue = 'SalStat', data=data2)
-job_salstat =pd.crosstab(index = data2["JobType"],columns = data2['SalStat'], margins = True, normalize =  'index')  
+job_salstat =pd.crosstab(index = data2["race"],columns = data2['SalStat'], margins = True, normalize =  'index')  
 round(job_salstat*100,1)
 
 
@@ -241,7 +242,7 @@ x2 = new_data[features2].values
 print(x2)
 
 # Splitting the data into train and test
-train_x2,test_x2,train_y2,test_y2 = train_test_split(x2,y2,test_size=0.3, random_state=0)
+train_x2,test_x2,train_y2,test_y2 = train_test_split(x2,y2,test_size=0.1, random_state=0)
 
 # Make an instance of the Model
 logistic2 = LogisticRegression()
@@ -252,9 +253,14 @@ logistic2.fit(train_x2,train_y2)
 # Prediction from test data
 prediction2 = logistic2.predict(test_x2)
 
+accuracy_score=accuracy_score(test_y2, prediction2)
+print(accuracy_score)
+
+
 # Printing the misclassified values from prediction
 print('Misclassified samples: %d' % (test_y2 != prediction2).sum())
 
 # =============================================================================
 # END OF SCRIPT
 # =============================================================================
+    
